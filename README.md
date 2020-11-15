@@ -1,4 +1,4 @@
-Shell Game Image Sorter
+Image Sorter
 =======================
 
 This is a small program for manually arranging images in a specific
@@ -8,10 +8,11 @@ the Shell Game Image Sorter allows using custom orders of images in
 programs that would otherwise only support alphabetical order.
 
 The Shell Game Image Sorter is written in [Python3][python] on top of
-the [PyQt5][pyqt5] library.  It runs (should run) on any platform
+the [PyQt][pyqt] library.  It runs (should run) on any platform
 supported by both Python and PyQt5, including Linux, Windows, and Mac
 OS X.
 
+The repo. is derived from the original [Python2 version](https://github.com/pdinges/shellgame-image-sorter).
 ### Screenshot
 
 ![Screenshot of the Shell Game Image Sorter.](https://raw.github.com/pdinges/shellgame-image-sorter/master/doc/unsorted.png)
