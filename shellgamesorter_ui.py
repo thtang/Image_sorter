@@ -32,7 +32,7 @@ class Ui_ShellGameSortWindow(object):
         self.verticalLayout.addWidget(self.galleryView)
         ShellGameSortWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(ShellGameSortWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 30))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 24))
         self.menubar.setObjectName("menubar")
         self.menuFile = QtWidgets.QMenu(self.menubar)
         self.menuFile.setObjectName("menuFile")
@@ -80,7 +80,7 @@ class Ui_ShellGameSortWindow(object):
 
     def retranslateUi(self, ShellGameSortWindow):
         _translate = QtCore.QCoreApplication.translate
-        ShellGameSortWindow.setWindowTitle(_translate("ShellGameSortWindow", "Shell Game Image Sorter"))
+        ShellGameSortWindow.setWindowTitle(_translate("ShellGameSortWindow", "Image Sorter"))
         self.menuFile.setTitle(_translate("ShellGameSortWindow", "File"))
         self.menuView.setTitle(_translate("ShellGameSortWindow", "View"))
         self.actionOpenDirectory.setText(_translate("ShellGameSortWindow", "Open directory..."))

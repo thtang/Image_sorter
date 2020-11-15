@@ -37,7 +37,8 @@ from PyQt5 import QtGui, Qt, QtWidgets
 import shellgamesorter_ui
 from filelistmodel import ImageListModel
 
-SUPPORTED_IMAGE_EXTENSIONS = [ "jpg", "jpeg", "png", "gif" ]
+# SUPPORTED_IMAGE_EXTENSIONS = [ "jpg", "jpeg", "png", "gif" ]
+SUPPORTED_IMAGE_EXTENSIONS = [ "png" ]
 
 class ShellGameSorter(QtWidgets.QMainWindow):
     """A small program for manually arranging images in order.  After the
@@ -48,6 +49,7 @@ class ShellGameSorter(QtWidgets.QMainWindow):
     def __init__(self, parent = None, flags = Qt.Qt.WindowFlags()):
         QtWidgets.QMainWindow.__init__(self, parent, flags)
         self._ui = shellgamesorter_ui.Ui_ShellGameSortWindow()
+        self.setWindowIcon(QtGui.QIcon('./doc/icon.png')) 
         self._ui.setupUi(self)
         self._setupSignals()
         
