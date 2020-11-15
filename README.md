@@ -7,9 +7,9 @@ order.  After the images have been sorted as desired, the program can
 the Shell Game Image Sorter allows using custom orders of images in
 programs that would otherwise only support alphabetical order.
 
-The Shell Game Image Sorter is written in [Python2][python] on top of
-the [PyQt][pyqt] library.  It runs (should run) on any platform
-supported by both Python and PyQt, including Linux, Windows, and Mac
+The Shell Game Image Sorter is written in [Python3][python] on top of
+the [PyQt5][pyqt5] library.  It runs (should run) on any platform
+supported by both Python and PyQt5, including Linux, Windows, and Mac
 OS X.
 
 ### Screenshot
@@ -20,13 +20,12 @@ OS X.
 Installation
 ------------
 
-* Download and install version 2.x of the
+* Download and install version 3.x of the
   [Python programming language][python-dl].
-* Download and install the [PyQt4 libraries][pyqt-dl].
+* Download and install the [PyQt5 libraries][pyqt-dl].
 * Download and extract, or checkout the contents of this repository.
 * Compile the user interface description into a Python class by
-  running the command `python2-pyuic4 shellgamesorter.ui >
-  shellgamesorter_ui.py` in the directory containing
+  running the command `pyuic5 shellgamesorter.ui -o shellgamesorter_ui.py` in the directory containing
   `shellgamesorter.ui`.
 
 
@@ -34,7 +33,7 @@ Usage
 -----
 
 * Start the program by running the `shellgamesorter.py` script with
-  the Python 2.x interpreter.  On Linux, the command is `python2
+  the Python 3.x interpreter.  On Linux, the command is `python3
   shellgamesorter.py`.
 * Open the directory containing the images you want to sort.  For
   example, consider a directory that contains the following files:
