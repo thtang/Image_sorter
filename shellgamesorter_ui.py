@@ -1,0 +1,95 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'shellgamesorter.ui'
+#
+# Created by: PyQt5 UI code generator 5.9.2
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_ShellGameSortWindow(object):
+    def setupUi(self, ShellGameSortWindow):
+        ShellGameSortWindow.setObjectName("ShellGameSortWindow")
+        ShellGameSortWindow.resize(800, 600)
+        self.centralwidget = QtWidgets.QWidget(ShellGameSortWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.galleryView = MoveListView(self.centralwidget)
+        self.galleryView.setDragEnabled(True)
+        self.galleryView.setDragDropMode(QtWidgets.QAbstractItemView.InternalMove)
+        self.galleryView.setDefaultDropAction(QtCore.Qt.MoveAction)
+        self.galleryView.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
+        self.galleryView.setMovement(QtWidgets.QListView.Snap)
+        self.galleryView.setResizeMode(QtWidgets.QListView.Adjust)
+        self.galleryView.setGridSize(QtCore.QSize(160, 160))
+        self.galleryView.setViewMode(QtWidgets.QListView.IconMode)
+        self.galleryView.setUniformItemSizes(True)
+        self.galleryView.setWordWrap(True)
+        self.galleryView.setObjectName("galleryView")
+        self.verticalLayout.addWidget(self.galleryView)
+        ShellGameSortWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(ShellGameSortWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 30))
+        self.menubar.setObjectName("menubar")
+        self.menuFile = QtWidgets.QMenu(self.menubar)
+        self.menuFile.setObjectName("menuFile")
+        self.menuView = QtWidgets.QMenu(self.menubar)
+        self.menuView.setObjectName("menuView")
+        ShellGameSortWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(ShellGameSortWindow)
+        self.statusbar.setObjectName("statusbar")
+        ShellGameSortWindow.setStatusBar(self.statusbar)
+        self.actionOpenDirectory = QtWidgets.QAction(ShellGameSortWindow)
+        self.actionOpenDirectory.setObjectName("actionOpenDirectory")
+        self.actionLoadOrder = QtWidgets.QAction(ShellGameSortWindow)
+        self.actionLoadOrder.setObjectName("actionLoadOrder")
+        self.actionSaveOrder = QtWidgets.QAction(ShellGameSortWindow)
+        self.actionSaveOrder.setObjectName("actionSaveOrder")
+        self.actionSaveOrderAs = QtWidgets.QAction(ShellGameSortWindow)
+        self.actionSaveOrderAs.setObjectName("actionSaveOrderAs")
+        self.actionQuit = QtWidgets.QAction(ShellGameSortWindow)
+        self.actionQuit.setObjectName("actionQuit")
+        self.actionApplyOrder = QtWidgets.QAction(ShellGameSortWindow)
+        self.actionApplyOrder.setObjectName("actionApplyOrder")
+        self.actionViewAsList = QtWidgets.QAction(ShellGameSortWindow)
+        self.actionViewAsList.setCheckable(True)
+        self.actionViewAsList.setObjectName("actionViewAsList")
+        self.actionViewAsIcons = QtWidgets.QAction(ShellGameSortWindow)
+        self.actionViewAsIcons.setCheckable(True)
+        self.actionViewAsIcons.setChecked(True)
+        self.actionViewAsIcons.setObjectName("actionViewAsIcons")
+        self.menuFile.addAction(self.actionOpenDirectory)
+        self.menuFile.addSeparator()
+        self.menuFile.addAction(self.actionLoadOrder)
+        self.menuFile.addAction(self.actionSaveOrder)
+        self.menuFile.addAction(self.actionSaveOrderAs)
+        self.menuFile.addAction(self.actionApplyOrder)
+        self.menuFile.addSeparator()
+        self.menuFile.addAction(self.actionQuit)
+        self.menuView.addAction(self.actionViewAsList)
+        self.menuView.addAction(self.actionViewAsIcons)
+        self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuView.menuAction())
+
+        self.retranslateUi(ShellGameSortWindow)
+        self.actionQuit.triggered.connect(ShellGameSortWindow.close)
+        QtCore.QMetaObject.connectSlotsByName(ShellGameSortWindow)
+
+    def retranslateUi(self, ShellGameSortWindow):
+        _translate = QtCore.QCoreApplication.translate
+        ShellGameSortWindow.setWindowTitle(_translate("ShellGameSortWindow", "Shell Game Image Sorter"))
+        self.menuFile.setTitle(_translate("ShellGameSortWindow", "File"))
+        self.menuView.setTitle(_translate("ShellGameSortWindow", "View"))
+        self.actionOpenDirectory.setText(_translate("ShellGameSortWindow", "Open directory..."))
+        self.actionLoadOrder.setText(_translate("ShellGameSortWindow", "Load order..."))
+        self.actionSaveOrder.setText(_translate("ShellGameSortWindow", "Save order"))
+        self.actionSaveOrderAs.setText(_translate("ShellGameSortWindow", "Save order as..."))
+        self.actionQuit.setText(_translate("ShellGameSortWindow", "Quit"))
+        self.actionApplyOrder.setText(_translate("ShellGameSortWindow", "Apply order"))
+        self.actionViewAsList.setText(_translate("ShellGameSortWindow", "View as list"))
+        self.actionViewAsIcons.setText(_translate("ShellGameSortWindow", "View as icons"))
+
+from movelistview import MoveListView
